@@ -1,0 +1,103 @@
+<app-flexheader></app-flexheader>
+
+<mat-sidenav-container class="sidenav-container" fxLayout="row">
+  <mat-sidenav  class="sidenav1" mode="side" 
+    fxflex="10" fxLayout="row" fxHide.xs opened *ngIf="!routerInfo" >
+    
+    
+      <mat-nav-list class="sidenav1-list" fxLayout="column"> 
+        <a mat-list-item routerLink="/home" routerLinkActive="active">
+          
+           <div class="outer-div">
+            <mat-icon>home</mat-icon>
+            <span class="outer-div-text">Home</span>
+           </div>
+        </a>
+        <a mat-list-item routerLink="/subs">
+          <div class="outer-div">
+            <mat-icon>local_fire_department</mat-icon>
+            <span class="outer-div-text">Trending</span>
+           </div>
+        </a>
+        <a mat-list-item href="#">
+          <div class="outer-div">
+            <mat-icon>subscriptions</mat-icon>
+            <span class="outer-div-text">Subcr</span>
+           </div>
+        </a>
+        <a mat-list-item href="#">
+          <div class="outer-div">
+            <mat-icon>
+              video_library</mat-icon>
+            <span class="outer-div-text">Library</span>
+           </div>
+        </a>
+        
+  
+      </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav class="sidenav2" mode="side"  opened  
+      fxLayout="row" fxHide.xs *ngIf="routerInfo" > 
+      
+      
+      <mat-nav-list class="nav-align" fxLayout="column" fxLayoutAlign="space-evenly">
+        <a mat-list-item href="">
+            <mat-icon>home</mat-icon>
+            <span class="outer2-div-text">Home</span>
+      </a>
+      <a mat-list-item href="">
+        <mat-icon>local_fire_department</mat-icon>
+        <span class="outer2-div-text">Trending</span>
+      </a>
+      <a mat-list-item href="">
+        <mat-icon>subscriptions</mat-icon>
+        <span class="outer2-div-text">subscription</span>
+      </a>
+      <hr>
+      <a mat-list-item href="">
+        <mat-icon>video_library</mat-icon>
+        <span class="outer2-div-text">Library</span>
+      </a>
+      <a mat-list-item href="">
+        <mat-icon>replay_circle_filled</mat-icon>
+        <span class="outer2-div-text">History</span>
+      </a> <a mat-list-item href="">
+        <mat-icon>slideshow</mat-icon>
+        <span class="outer2-div-text">Your Video</span>
+      </a>
+      <a mat-list-item href="">
+        <mat-icon>movie</mat-icon>
+        <span class="outer2-div-text">Tour Moveies</span>
+      </a>
+      <a mat-list-item href="">
+        <mat-icon>access_time_filled</mat-icon>
+        <span class="outer2-div-text">Watch Later</span>
+      </a>
+      
+      </mat-nav-list>   
+</mat-sidenav>
+
+  
+  <mat-sidenav-content fxFlex="auto" fxLayout="column" class="sidenav-content">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="nav-toolbar" fxShow.sm>
+       <button mat-flat-button class="nav-button" >All </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button class="nav-button">All videos </button>
+       <button mat-flat-button mat-flat-button class="nav-button">All videos </button>
+    </div>
+    <div class="navdash"  fxFill>
+      <app-dashboard></app-dashboard>
+      <router-outlet></router-outlet>
+    </div>
+      
+      
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,83 @@
+<mat-toolbar class="main-header">
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10%">
+        <div class="banner" fxLayout="row" fxLayoutAlign="center">
+            <span>
+
+                <button mat-icon-button (click)="openSideNav()"><mat-icon>menu</mat-icon></button> 
+                    <img class="banner-logo" src="./assets/photo/logo.png"
+                     alt="logo">
+            </span>
+           
+        </div>
+        <div class="search-nav" >
+        <!-- fxLayout="row" fxLayoutAlign="stretch" fxFlex -->
+        
+        
+                    <input type="radio" class="search-input" placeholder="search....."> 
+                    <button mat-icon-button><mat-icon>search</mat-icon></button>
+                    <button mat-button><mat-icon 
+                         aria-label="Example icon-button with mic icon" color="warn">mic</mat-icon>
+                   </button>
+                   
+        </div>
+        <div class="menu-nav">
+            <button mat-icon-button  [matMenuTriggerFor]="viewVideo"><mat-icon>video_call</mat-icon></button>
+                <mat-menu #viewVideo="matMenu" xPosition="after">
+                    <span mat-menu-item><mat-icon>upload</mat-icon>Upload Video</span>
+                    <span mat-menu-item><mat-icon>surround_sound</mat-icon>Go Live</span>
+                    
+                </mat-menu>
+            <button mat-button
+                [matMenuTriggerFor]="viewMenu"
+                ><mat-icon>view_module</mat-icon>
+            </button>
+                <mat-menu #viewMenu="matMenu" xPosition="before">
+                    <span mat-menu-item><mat-icon>featured_video</mat-icon>TouTube Tv</span>
+                    <hr>
+                    <span mat-menu-item><mat-icon>audiotrack</mat-icon>TouTube Music</span>
+                    <span mat-menu-item><mat-icon>crop_5_4</mat-icon>TouTube Kids</span>
+                    <span mat-menu-item><mat-icon>local_activity</mat-icon>TouTube Tv</span>
+                    <span mat-menu-item><mat-icon>local_movies</mat-icon>TouTube Artist</span>
+
+                </mat-menu>
+            <button mat-button [matMenuTriggerFor]="viewNotification">
+              <mat-icon  color="primary"
+                matBadge="8" matBadgePosition="after" matBadgeColor="accent" 
+                aria-label="Example icon-button with notification_important icon" 
+                aria-hidden="false">
+                notification_important
+              </mat-icon>
+            </button>
+                <mat-menu #viewNotification="matMenu" xPosition="before" >
+                    <div class="notification-menu">
+                        <div fxLayoutAlign="space-between">
+                            <h3 mat-menu-item>Notification </h3>
+                            <span mat-menu-item><mat-icon>miscellaneous_services</mat-icon></span>
+                        </div> 
+                        
+                        <span mat-menu-item>Notification 1</span>
+                        <span mat-menu-item>Notification 2</span>
+                        <span mat-menu-item>Notification 3</span>
+                        <span mat-menu-item>Notification 4</span>
+                        <span mat-menu-item>Notification 5</span>
+                    </div>
+                   
+                </mat-menu>
+             
+            <button mat-icon-button class="avtar"
+             [matMenuTriggerFor]="viewPerson"
+                aria-label="Example icon-button with share icon">
+            <mat-icon>perm_identity</mat-icon>
+            </button>
+                <mat-menu #viewPerson="matMenu" xPosition="before">
+                    <h2>
+                        <button mat-icon-button class="avtar">ME</button> 
+                    </h2>
+                <p>Profile...</p> 
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 1</button>
+                </mat-menu>
+        </div>
+        
+    </mat-toolbar-row>      
+  </mat-toolbar>

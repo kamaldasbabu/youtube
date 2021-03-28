@@ -1,0 +1,81 @@
+<div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5%">
+        <div class="header-banner" fxFlex="20" fxLayoutAlign="start">
+            <button mat-icon-button fxHide.xs (click)="openSideNav()"><mat-icon>menu</mat-icon></button> 
+                    <img class="banner-logo" src="./assets/photo/logo.png"
+                     alt="logo">
+        </div>
+        <div class="header-search" fxFlex="50" fxLayout="row" fxLayoutAlign="space-between">
+                    <input type="text"  class="search-input" fxHide.xs placeholder="search...."> 
+                    <button mat-icon-button><mat-icon>search</mat-icon></button>
+                    <button mat-icon-button><mat-icon 
+                         aria-label="Example icon-button with mic icon" color="warn">mic</mat-icon>
+                   </button>
+        </div>
+        <div class="header-menu" fxFlex="20" fxLayoutAlign="end">
+            <button mat-icon-button  [matMenuTriggerFor]="viewVideo" fxHide.xs><mat-icon>video_call</mat-icon></button>
+            <mat-menu #viewVideo="matMenu" xPosition="after">
+              <span mat-menu-item><mat-icon>upload</mat-icon>Upload Video</span>
+              <span mat-menu-item><mat-icon>surround_sound</mat-icon>Go Live</span>
+              
+          </mat-menu>
+            <button mat-icon-button fxHide.xs
+                [matMenuTriggerFor]="viewMenu"
+                ><mat-icon>view_module</mat-icon>
+            </button>
+            <mat-menu #viewMenu="matMenu" xPosition="before">
+              <span mat-menu-item><mat-icon>featured_video</mat-icon>TouTube Tv</span>
+              <hr>
+              <span mat-menu-item><mat-icon>audiotrack</mat-icon>TouTube Music</span>
+              <span mat-menu-item><mat-icon>crop_5_4</mat-icon>TouTube Kids</span>
+              <span mat-menu-item><mat-icon>local_activity</mat-icon>TouTube Tv</span>
+              <span mat-menu-item><mat-icon>local_movies</mat-icon>TouTube Artist</span>
+          
+          </mat-menu>
+                
+            <button mat-icon-button [matMenuTriggerFor]="viewNotification">
+              <mat-icon  color="primary"
+                matBadge="8" matBadgePosition="after" matBadgeColor="accent" 
+                aria-label="Example icon-button with notification_important icon" 
+                aria-hidden="false">
+                notification_important
+              </mat-icon>
+            </button>
+            <mat-menu #viewNotification="matMenu" xPosition="before" >
+              <div class="notification-menu">
+                  <div fxLayoutAlign="space-between">
+                      <h3 mat-menu-item>Notification </h3>
+                      <span mat-menu-item><mat-icon>miscellaneous_services</mat-icon></span>
+                  </div> 
+                  
+                  <span mat-menu-item>Notification 1</span>
+                  <span mat-menu-item>Notification 2</span>
+                  <span mat-menu-item>Notification 3</span>
+                  <span mat-menu-item>Notification 4</span>
+                  <span mat-menu-item>Notification 5</span>
+              </div>
+             
+          </mat-menu>
+               
+            <button mat-icon-button class="avtar"
+             [matMenuTriggerFor]="viewProfile"
+                aria-label="Example icon-button with share icon">
+            <mat-icon>perm_identity</mat-icon>
+            </button>
+            <mat-menu #viewProfile="matMenu" xPosition="before" >
+              <div class="notification-menu">
+                  <div fxLayoutAlign="space-between">
+                      <h3 mat-menu-item>Profile..  </h3>
+                      <span mat-menu-item><mat-icon>miscellaneous_services</mat-icon></span>
+                  </div> 
+                  
+                  <span mat-menu-item> Your Channel </span>
+                  <span mat-menu-item>Purches </span>
+                  <span mat-menu-item>Sign Out</span>
+                  <span mat-menu-item>Setting</span>
+                  <span mat-menu-item>Language</span>
+              </div>
+             
+          </mat-menu>
+        </div>
+   
+</div>

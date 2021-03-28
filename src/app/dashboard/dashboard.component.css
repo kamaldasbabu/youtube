@@ -1,0 +1,27 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  bottom: 10%;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: left;
+}
+section {
+  border: 1px black;
+  box-shadow: 10px lightpink;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

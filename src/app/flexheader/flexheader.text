@@ -1,0 +1,98 @@
+<mat-toolbar class="main-header" fxFlex>
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5%">
+        <div class="banner" fxLayout="row" fxLayoutAlign="center" fxFlex="20">
+            <span>
+
+                <button mat-icon-button ><mat-icon>menu</mat-icon></button> 
+                    <img class="banner-logo" src="./assets/photo/logo.png"
+                     alt="logo">
+            </span>
+           
+        </div>
+        <div class="header-search" fxLayout="row" fxLayoutAlign="start" fxFlex="55">
+                    <input type="text" matInput class="search-input"> 
+                    <button mat-icon-button><mat-icon>search</mat-icon></button>
+                    <button mat-icon-button><mat-icon 
+                         aria-label="Example icon-button with mic icon" color="warn">mic</mat-icon>
+                   </button>
+                   
+        </div>
+        <div class="header-menu" fxFlex="15" fxLayoutAlign="space-between center">
+            <button mat-icon-button  [matMenuTriggerFor]=""><mat-icon>video_call</mat-icon></button>
+                
+            <button mat-icon-button
+                [matMenuTriggerFor]=""
+                ><mat-icon>view_module</mat-icon>
+            </button>
+                
+            <button mat-icon-button [matMenuTriggerFor]="">
+              <mat-icon  color="primary"
+                matBadge="8" matBadgePosition="after" matBadgeColor="accent" 
+                aria-label="Example icon-button with notification_important icon" 
+                aria-hidden="false">
+                notification_important
+              </mat-icon>
+            </button>
+               
+            <button mat-icon-button class="avtar"
+             [matMenuTriggerFor]=""
+                aria-label="Example icon-button with share icon">
+            <mat-icon>perm_identity</mat-icon>
+            </button>
+                
+        </div>
+        
+    </mat-toolbar-row>      
+  </mat-toolbar>
+
+-------------------------------------------------------------------
+
+.main-header {
+    margin: 0;
+    display: flex;
+  }
+  .banner-logo {
+    height: 50%;
+    width: 50%;
+    margin-left: 5%;
+    
+  }
+  mat-icon {
+      color:red;
+      
+  }
+  
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  sup {
+    vertical-align: super;
+    font-size: 10px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border: 2px solid;
+    width: 100%;
+  }
+  .banner {
+    background-color: none;
+  }
+  .notification-menu {
+    height: 500px;
+    width: 250px;
+  }
+  .avtar {
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: inline;
+  }
+  .header-menu {
+      background-color: darkgray;
+      margin-left: 2%;
+  }
+  

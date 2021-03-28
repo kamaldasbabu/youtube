@@ -1,0 +1,8 @@
+.avtar {
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: inline;
+    background-image: url("D:/Babu/Angular/Trainning/youtube/src/assets/photo/photo.jpg");
+  }

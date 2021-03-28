@@ -1,0 +1,42 @@
+.main-header {
+  margin: 0;
+  display: fixed;
+}
+.banner-logo {
+  height: 50%;
+  width: 50%;
+  margin-left: 1%;
+  
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.search-nav {
+  display: flex;
+  flex-grow: 0;
+  width: 100%;
+  margin: 2 2rem 0 4rem;
+  position: sticky;
+}
+.search-input {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.banner {
+  background-color: none;
+}
+.notification-menu {
+  height: 500px;
+  width: 250px;
+}
+.avtar {
+  border-radius: 50%;
+  border: 2px solid;
+  flex-shrink: 0;
+  object-fit: cover;
+}

@@ -1,0 +1,22 @@
+.header-banner {
+  margin-left: 1%;
+}
+.header-search {
+}
+.header-menu {
+}
+
+.banner-logo {
+  height: 40%;
+  width: 40%;
+  margin-left: 2%;
+}
+.search-input {
+  padding: 0px;
+  border: 1px solid black ;
+  width: 100%;
+}
+.notification-menu {
+  height: 500px;
+  width: 250px;
+}
